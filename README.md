@@ -40,7 +40,7 @@ appsettings.json
 Por padrão:
 
 ```text
-Server=.\SQLEXPRESS;Database=LocadoraVeiculos;Trusted_Connection=True;TrustServerCertificate=True
+Server=.\localhost;Database=LocadoraVeiculos;Trusted_Connection=True;TrustServerCertificate=True
 ```
 
 Se sua instância do SQL Express tiver outro nome, ajuste o valor.
