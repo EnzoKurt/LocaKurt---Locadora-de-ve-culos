@@ -4,14 +4,28 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Gera o arquivo XML usado pelo Swagger para mostrar
+         os comentários dos endpoints na documentação. -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    <!-- Evita avisos do compilador para comentários XML
+         que não tenham sido escritos em todos os lugares. -->
+    <NoWarn>$(NoWarn);1591</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
+
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.20" />
+
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.20">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+
+    <!-- Biblioteca utilizada para gerar a documentação Swagger/OpenAPI. -->
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+
   </ItemGroup>
 
 </Project>
