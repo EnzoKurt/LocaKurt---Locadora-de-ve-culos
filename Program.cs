@@ -53,6 +53,7 @@ app.UseSwaggerUI(options =>
 });
 
 app.MapControllers();
+app.MapGet("/", () => Results.Redirect("/swagger"));
 
 // Cria o banco caso ele ainda não exista.
 // A estrutura continua sendo definida pelas classes do Entity Framework.
